@@ -3,8 +3,10 @@
 <div  class="box box-info">
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-		<h3>LISTADO DE CONTRATO <a href="nuevo/create"><button class="btn btn-success">Nuevo</button></a></h3>
+		<h3>LISTADO DE CONTRATO DE ELECTRO Y HERRAMIENTAS</h3>
 		@include('contrato.nuevo.search')
+		<a href="nuevo/create"><button class="btn btn-success">Nuevo</button></a>
+	</div>
 	</div>
 </div>
 
@@ -15,6 +17,7 @@
 				<thead>
 					<th>ID</th>
 					<th>CODIGO</th>
+					<th>DNI</th>
 					<th>NOMBRE</th>
 					<th>DESCRIPCION</th>
 					<th>TAZACION</th>
@@ -23,15 +26,22 @@
 				</thead>
                @foreach ($contrato as $cat)
 				<tr>
-					<td>{{ $cat->idcontrato}}</td>
+					<td>{{ $cat->id}}</td>
 					<td>{{ $cat->codigo}}</td>
+					<td>{{ $cat->dni}}</td>
 					<td>{{ $cat->nombre}}</td>
 					<td>{{ $cat->descripcion}}</td>
 					<td>{{ $cat->tazacion}}</td>
 					<td>{{ $cat->estatus}}</td>
 					<td>
-                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                      	<a  ><button class="btn btn-info">Ver</button></a>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                     	<a href="/detalles/renovacion" ><button class="btn btn-warning">Renovar</button></a>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                     	<a  href="/detalles/nuevo"><button class="btn btn-danger">Cancelar</button></a>
 					</div>
 
 					</td>

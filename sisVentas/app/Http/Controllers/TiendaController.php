@@ -26,16 +26,7 @@ class TiendaController extends Controller
             return view('almacen.tienda.index',["tienda"=>$tienda,"searchText"=>$query]);
         }
     }
-     public function indexx(Request $request)
-    {
-        if ($request)
-        {
-            $query=trim($request->get('searchText'));
-            $tienda=DB::table('tienda')->where('nombre','LIKE','%'.$query.'%')
-            ->paginate(10);
-            return view('consultas.tiendas.index',["tienda"=>$tienda,"searchText"=>$query]);
-        }
-    }
+    
     public function create()
     {
         return view("almacen.tienda.create");
@@ -43,7 +34,6 @@ class TiendaController extends Controller
     public function store (TiendaFormRequest $request)
     {
         $tienda=new tienda;
-        $tienda->idtienda=$request->get('idtienda');
         $tienda->nombre=$request->get('nombre');
         $tienda->letrae=$request->get('letrae');
         $tienda->letrao=$request->get('letrao');
@@ -62,7 +52,6 @@ class TiendaController extends Controller
     public function update(TiendaFormRequest $request,$id)
     {
         $tienda=tienda::findOrFail($id);
-        $tienda->idtienda=$request->get('idtienda');
         $tienda->nombre=$request->get('nombre');
         $tienda->letrae=$request->get('letrae');
         $tienda->letrao=$request->get('letrao');
@@ -71,7 +60,7 @@ class TiendaController extends Controller
     }
     public function destroy($id)
     {
-        $tienda = DB::table('tienda')->where('idtienda', '=', $id)->delete();
+        $tienda = DB::table('tienda')->where('id', '=', $id)->delete();
         return Redirect::to('almacen/tienda');
     }
 

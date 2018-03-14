@@ -15,9 +15,7 @@ class CreateArticuloTable extends Migration
          Schema::create('articulo', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('idcategoria');
-             $table->foreign('idcategoria')->references('id')->on('categoria');
             $table->integer('idtienda');
-            $table->foreign('idtienda')->references('id')->on('tienda');
             $table->integer('codigo');
             $table->string('nombre');
             $table->string('marca');

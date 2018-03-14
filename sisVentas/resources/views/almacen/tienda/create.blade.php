@@ -15,10 +15,7 @@
 
 			{!!Form::open(array('url'=>'almacen/tienda','method'=>'POST','autocomplete'=>'off'))!!}
             {{Form::token()}}
-            <div class="form-group">
-                  <label for="idtienda">Codigo</label>
-                  <input type="text" name="idtienda" class="form-control">
-            </div>
+            
               <div class="form-group">
             	<label for="nombre">Nombre</label>
             	<input type="text" name="nombre" class="form-control">

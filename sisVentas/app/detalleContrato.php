@@ -8,7 +8,7 @@ class detalleContrato extends Model
 {
     protected $table='detalle_contrato';
 
-    protected $primaryKey='idcontrato';
+    protected $primaryKey='id';
 
     public $timestamps=false;
 

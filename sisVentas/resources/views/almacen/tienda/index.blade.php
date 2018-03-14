@@ -2,8 +2,9 @@
 @section ('contenido')
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-		<h3>Listado de Tiendas <a href="tienda/create"><button class="btn btn-success">Nuevo</button></a></h3>
+		<h3>Listado de Tiendas </h3>
 		@include('almacen.tienda.search')
+		<a href="tienda/create"><button class="btn btn-success">Nuevo</button></a>
 	</div>
 </div>
 
@@ -20,13 +21,13 @@
 				</thead>
                @foreach ($tienda as $cat)
 				<tr>
-					<td>{{ $cat->idtienda}}</td>
+					<td>{{ $cat->id}}</td>
 					<td>{{ $cat->nombre}}</td>
 					<td>{{ $cat->letrae}}</td>
 					<td>{{ $cat->letrao}}</td>
 					<td>
-						<a href="{{URL::action('TiendaController@edit',$cat->idtienda)}}"><button class="btn btn-info">Editar</button></a>
-                         <a href="" data-target="#modal-delete-{{$cat->idtienda}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
+						<a href="{{URL::action('TiendaController@edit',$cat->id)}}"><button class="btn btn-info">Editar</button></a>
+                         <a href="" data-target="#modal-delete-{{$cat->id}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
 					</td>
 				</tr>
 				@include('almacen.tienda.modal')

@@ -63,17 +63,17 @@ class PersonaControllers extends Controller
         return Redirect::to('almacen/persona');
 
     }
-    public function show($idpersona)
+    public function show($id)
     {
-        return view("almacen.persona.show",["persona"=>persona::findOrFail($idpersona)]);
+        return view("almacen.persona.show",["persona"=>persona::findOrFail($id)]);
     }
-    public function edit($idpersona)
+    public function edit($id)
     {
-        return view("almacen.persona.edit",["persona"=>persona::findOrFail($idpersona)]);
+        return view("almacen.persona.edit",["persona"=>persona::findOrFail($id)]);
     }
-    public function update(PersonaFromRequest $request,$idpersona)
+    public function update(PersonaFromRequest $request,$id)
     {
-        $persona=persona::findOrFail($idpersona);
+        $persona=persona::findOrFail($id);
         $persona->tipo_dni=$request->get('tipo_dni');
         $persona->dni=$request->get('dni');
         $persona->nombre=$request->get('nombre');
@@ -89,9 +89,9 @@ class PersonaControllers extends Controller
         $persona->update();
         return Redirect::to('almacen/persona');
     }
-    public function destroy($idpersona)
+    public function destroy($id)
     {
-      $persona= DB::table('persona')->where('idpersona', '=', $idpersona)->delete();
+      $persona= DB::table('persona')->where('id', '=', $id)->delete();
         return Redirect::to('almacen/persona');
     }
  //

@@ -72,7 +72,7 @@ class CategoriaController extends Controller
     }
     public function destroy($id)
     {
-        $categoria = DB::table('categoria')->where('idcategoria', '=', $id)->delete();
+        $categoria = DB::table('categoria')->where('id', '=', $id)->delete();
         return Redirect::to('almacen/categoria');
     }
 

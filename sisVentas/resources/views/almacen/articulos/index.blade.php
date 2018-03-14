@@ -2,8 +2,9 @@
 @section ('contenido')
 <div class="row">
 	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-		<h3>Listado de Articulos <a href="articulos/create"><button class="btn btn-success">Nuevo</button></a></h3>
+		<h3>Listado de Articulos </h3>
 		@include('almacen.articulos.search')
+		<a href="articulos/create"><button class="btn btn-success">Nuevo</button></a>
 	</div>
 </div>
 
@@ -40,11 +41,11 @@
 					<td>{{ $cat->vitrina}}</td>
 					<td>
                      
-						<a href="{{URL::action('ArticulosController@edit',$cat->idarticulo)}}"><button class="btn btn-info">Editar</button></a>
+						<a href="{{URL::action('ArticulosController@edit',$cat->id)}}"><button class="btn btn-info">Editar</button></a>
 					
 
 						
-                         <a href="" data-target="#modal-delete-{{$cat->idarticulo}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
+                         <a href="" data-target="#modal-delete-{{$cat->id}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
                     
 					
 				</tr>

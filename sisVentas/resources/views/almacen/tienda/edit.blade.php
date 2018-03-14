@@ -13,12 +13,9 @@
 			</div>
 			@endif
 
-			{!!Form::model($tienda,['method'=>'PATCH','route'=>['almacen.tienda.update',$tienda->idtienda]])!!}
+			{!!Form::model($tienda,['method'=>'PATCH','route'=>['almacen.tienda.update',$tienda->id]])!!}
             {{Form::token()}}
-             <div class="form-group">
-                  <label for="idtienda">Codigo</label>
-                  <input type="text" name="idtienda" class="form-control" value="{{$tienda->idtienda}}">
-            </div>
+            
             <div class="form-group">
             	<label for="nombre">Nombre</label>
             	<input type="text" name="nombre" class="form-control" value="{{$tienda->nombre}}">

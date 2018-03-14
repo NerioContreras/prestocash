@@ -109,23 +109,6 @@
                 
               </ul>
             </li>
-            
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-th"></i>
-                <span>CONSULTAS</span>
-                 <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="/consultas/categorias"><i class="fa fa-circle-o"></i> Categorias</a></li>
-                <li><a href="/consultas/articulos"><i class="fa fa-circle-o"></i> Articulos</a></li>
-                <li><a href="/consultas/personas"><i class="fa fa-circle-o"></i> Clientes</a></li>
-                <li><a href="/consultas/tiendas"><i class="fa fa-circle-o"></i> Tiendas</a></li>
-              </ul>
-            </li>
-
-
-            
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-shopping-cart"></i>
@@ -136,7 +119,7 @@
                 <li class="treeview">
               <a href="#">
                 <i class="fa fa-plus-square"></i>
-                <span>Nuevos Contratos</span>
+                <span>Contratos</span>
                  <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
@@ -144,38 +127,7 @@
                 <li><a href="/contrato/nuevo"><i class="fa fa-circle-o"></i>ORO</a></li>
                 <li><a href="/contrato/nuevo"><i class="fa fa-circle-o"></i>CARROS</a></li>
               </ul>
-              </ul>            
-                <ul class="treeview-menu">
-                <li class="treeview">
-              <a href="#">
-                <i class="fa fa-plus-square"></i>
-                <span>Renovar Contrato</span>
-                 <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="/detalles/renovacion"><i class="fa fa-circle-o"></i>Electro y Herramientas</a></li>
-                <li><a href="/contrato/nuevo"><i class="fa fa-circle-o"></i>ORO</a></li>
-                <li><a href="/contrato/nuevo"><i class="fa fa-circle-o"></i>CARROS</a></li>
-               
-              </ul>
-
-              </ul>
-
-                <ul class="treeview-menu">
-                <li class="treeview">
-              <a href="#">
-                <i class="fa fa-plus-square"></i>
-                <span>Cancelar Contrato</span>
-                 <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="/detalles/nuevo"><i class="fa fa-circle-o"></i>Electro y Herramientas</a></li>
-                <li><a href="/contrato/nuevo"><i class="fa fa-circle-o"></i>ORO</a></li>
-                <li><a href="/contrato/nuevo"><i class="fa fa-circle-o"></i>CARROS</a></li>
-               
-              </ul>
-              
-              </ul>
+              </ul>      
 
                 <ul class="treeview-menu">
                 <li class="treeview">
@@ -223,6 +175,14 @@
               </ul>
             </li>
 
+            <li class="treeview">
+              <a href="/reportes/tiendas" >
+                <i class="fa fa-circle-o"></i>
+                <span>REPORTES</span>
+                 <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              
+            </li>
 
   
                

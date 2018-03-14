@@ -3,8 +3,9 @@
 <div class="box box-info">
 <div class="row">
 	<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-		<h3>LISTADO DE PERSONAS <a href="persona/create"><button class="btn btn-success">Nuevo</button></a></h3>
+		<h3>LISTADO DE PERSONAS </h3>
 		@include('almacen.persona.search')
+		<a href="persona/create"><button class="btn btn-success">Nuevo</button></a>
 	</div>
 </div>
 
@@ -31,9 +32,9 @@
 					<td>{{ $cat->categoria}}</td>
 					
 					<td>
-						<a href="{{URL::action('PersonaControllers@edit',$cat->idpersona)}}"><button class="btn btn-info">Editar</button></a>
+						<a href="{{URL::action('PersonaControllers@edit',$cat->id)}}"><button class="btn btn-info">Editar</button></a>
 						
-                         <a href="" data-target="#modal-delete-{{$cat->idpersona}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
+                         <a href="" data-target="#modal-delete-{{$cat->id}}" data-toggle="modal"><button class="btn btn-danger">Eliminar</button></a>
 					</div>
 					</td>
 				</tr>

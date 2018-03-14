@@ -18,9 +18,9 @@ class CreateContratoTable extends Migration
             $table->integer('dni');
             $table->string('nombre');
             $table->string('tienda');
-            $table->date('fecha_inicio');
-            $table->date('fecha_mes');
-            $table->date('fecha_final');
+            $table->string('fecha_inicio');
+            $table->string('fecha_mes');
+            $table->string('fecha_final');
             $table->string('categoria');
             $table->string('estatus');
             $table->integer('cantida');

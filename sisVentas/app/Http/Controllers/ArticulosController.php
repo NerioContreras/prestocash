@@ -23,26 +23,12 @@ class ArticulosController extends Controller
         {
             $query=trim($request->get('searchText'));
             $articulo=DB::table('articulo as a')
-            ->join('categoria as c','a.idcategoria','=','c.idcategoria')
-            ->join('tienda as t','a.idtienda','=','t.idtienda')
-            ->select('a.idarticulo','c.nombre as cat','t.nombre as tien','a.codigo','a.nombre','a.marca','a.modelo','a.obsv','a.serial','a.precio','a.precioweb','a.vitrina')
+            ->join('categoria as c','a.idcategoria','=','c.id')
+            ->join('tienda as t','a.idtienda','=','t.id')
+            ->select('a.idcategoria','c.nombre as cat','t.nombre as tien','a.codigo','a.nombre','a.marca','a.modelo','a.obsv','a.serial','a.precio','a.precioweb','a.vitrina')
             ->where('a.nombre','LIKE','%'.$query.'%')->orwhere('a.codigo','LIKE','%'.$query.'%')
             ->paginate(5);
             return view('almacen.articulos.index',["articulo"=>$articulo,"searchText"=>$query]);
-        }
-    }
-      public function indexx(Request $request)
-    {
-        if ($request)
-        {
-            $query=trim($request->get('searchText'));
-            $articulo=DB::table('articulo as a')
-            ->join('categoria as c','a.idcategoria','=','c.idcategoria')
-            ->join('tienda as t','a.idtienda','=','t.idtienda')
-            ->select('a.idarticulo','c.nombre as cat','t.nombre as tien','a.codigo','a.nombre','a.marca','a.modelo','a.obsv','a.serial','a.precio','a.precioweb','a.vitrina')
-            ->where('a.nombre','LIKE','%'.$query.'%')->orwhere('a.codigo','LIKE','%'.$query.'%')
-            ->paginate(5);
-            return view('consultas.articulos.index',["articulo"=>$articulo,"searchText"=>$query]);
         }
     }
     public function create()
@@ -99,7 +85,7 @@ class ArticulosController extends Controller
     }
     public function destroy($id)
     {
-        $categoria = DB::table('articulo')->where('idarticulo', '=', $id)->delete();
+        $categoria = DB::table('articulo')->where('id', '=', $id)->delete();
         return Redirect::to('almacen/articulos');
     }
 

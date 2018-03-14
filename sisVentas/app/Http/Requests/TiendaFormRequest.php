@@ -25,7 +25,6 @@ class TiendaFormRequest extends Request
     {
         return [
             //'nombre'=>'required|max:50',
-            'idtienda'=>'required|max:141',
             'nombre'=>'required|max:141',
             'letrae'=>'required|max:141',
             'letrao'=>'required|max:141',

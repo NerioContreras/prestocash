@@ -8,7 +8,7 @@ class tienda extends Model
 {
     protected $table='tienda';
 
-    protected $primaryKey='idtienda';
+    protected $primaryKey='id';
 
     public $timestamps=false;
 

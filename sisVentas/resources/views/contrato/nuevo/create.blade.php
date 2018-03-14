@@ -71,14 +71,14 @@
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                   <div class="form-group">
                          <label for="fecha_inicio">Fecha de Reguistro</label>
-                              <input type="text" class="form-control"  name="fecha_inicio" id="fecha_inicio" required value="{{old('fecha_inicio',$now->format('d - M - Y ' ))}}">
+                              <input type="text" class="form-control"  name="fecha_inicio" id="fecha_inicio" required value="{{old('fecha_inicio',$now->format('Y - M - d ' ))}}">
                    </div>
 
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                   <div class="form-group">
                          <label for="fecha_mes">Fecha de Pago</label>
-                         <input type="text"  class="form-control"  name="fecha_mes" id="fecha_mes" value="{{old('fecha_mes',$now->addDay(31)->format('  d - M - Y'))}}">
+                         <input type="text"  class="form-control"  name="fecha_mes" id="fecha_mes" value="{{old('fecha_mes',$now->addDay(31)->format('  Y - M - d'))}}">
                    </div>
             </div>
 
@@ -86,7 +86,7 @@
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                   <div class="form-group">
                          <label for="fecha_final">Fecha de Mora</label>
-                         <input type="text"  class="form-control"  name="fecha_final" id="fecha_final" value="{{old('fecha_final',$now->addDay(5)->format(' d - M - Y'))}}">
+                         <input type="text"  class="form-control"  name="fecha_final" id="fecha_final" value="{{old('fecha_final',$now->addDay(5)->format(' Y - M - d'))}}">
                    </div>
             </div>
  </div>

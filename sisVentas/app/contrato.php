@@ -8,7 +8,7 @@ class contrato extends Model
 {
  protected $table='contrato';
 
-    protected $primaryKey='idcontrato';
+    protected $primaryKey='id';
 
     public $timestamps=false;
 
