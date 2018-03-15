@@ -40,7 +40,6 @@
 					<td>{{ $cat->precioweb}}</td>
 					<td>{{ $cat->vitrina}}</td>
 					<td>
-                     
 						<a href="{{URL::action('ArticulosController@edit',$cat->id)}}"><button class="btn btn-info">Editar</button></a>
 					
 

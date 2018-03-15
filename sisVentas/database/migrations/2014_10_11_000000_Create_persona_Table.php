@@ -25,7 +25,7 @@ class CreatePersonaTable extends Migration
             $table->string('correo')->unique();
             $table->string('cactado');
             $table->string('categoria');
-            $table->date('fecha');
+            $table->string('fecha');
             $table->timestamps();
         });
         //

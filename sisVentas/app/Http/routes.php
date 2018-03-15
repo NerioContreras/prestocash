@@ -25,6 +25,8 @@ Route::resource('consultas/articulos','ArticulosController@indexx');
 Route::resource('almacen/tienda','TiendaController');
 Route::resource('consultas/tiendas','TiendaController@indexx');
 Route::resource('contrato/nuevo','ContratoController');
+Route::resource('contrato/oro','OroController');
+Route::resource('contrato/carro','CarroController');
 Route::resource('reportes/tiendas','PDFTiendaController');
 Route::resource('detalles/nuevo','DetalleContratoController');
 Route::resource('detalles/renovacion','RenovacionController');

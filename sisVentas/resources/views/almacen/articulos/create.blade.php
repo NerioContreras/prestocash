@@ -16,7 +16,7 @@
 	
       </div>
 
-      		{!!Form::open(array('url'=>'almacen/articulos','method'=>'POST','autocomplete'=>'off','files'=>'true'))!!}
+      	{!!Form::open(array('url'=>'almacen/articulos','method'=>'POST','autocomplete'=>'off','files'=>'true'))!!}
             {{Form::token()}}
 
       <div class="row">
@@ -25,9 +25,8 @@
                          <label>Categoria</label>
                          <select name="idcategoria" class="form-control">
                               @foreach ($categorias as $cat)
-                              <option value="{{$cat->idcategoria}}">{{$cat->nombre}}</option>
+                              <option value="{{$cat->id}}">{{$cat->nombre}}</option>
                               @endforeach
-                               
                          </select>
                    </div>
             </div>
@@ -36,7 +35,7 @@
                          <label>Tienda</label>
                          <select name="idtienda" class="form-control">
                               @foreach ($tienda as $cat)
-                              <option value="{{$cat->idtienda}}">{{$cat->nombre}}</option>
+                              <option value="{{$cat->id}}">{{$cat->nombre}}</option>
                               @endforeach
                                
                          </select>

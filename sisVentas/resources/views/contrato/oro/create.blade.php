@@ -7,7 +7,7 @@
     
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-			<h3 >Nuevo Contrato</h3>
+			<h3 >Nuevo Contrato de ORO</h3>
                  
 			@if (count($errors)>0)
 			<div class="alert alert-danger">
@@ -22,7 +22,7 @@
 	
       </div>
 
-      		{!!Form::open(array('url'=>'contrato/nuevo','method'=>'POST','autocomplete'=>'off','files'=>'true'))!!}
+      	{!!Form::open(array('url'=>'contrato/oro','method'=>'POST','autocomplete'=>'off','files'=>'true'))!!}
             {{Form::token()}}
 
       <div class="row">
@@ -97,30 +97,6 @@
 
  
 <div class="panel-body panel panel-primary">
-
-             
-                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="form-group">
-                               <label for="categoria">CATEGORIA</label>
-                               <select  name="categoria" class="form-control selectpicker" id="categoria" data-live-search="true">
-                               @foreach ($categoria as $categoria)
-                               <option value="{{$categoria->nombre}}_{{$categoria->interes}}">{{$categoria->nombre}}
-                               </option>
-                               @endforeach
-                               </select>
-                        </div>
-                   </div>  
-             
-                  
-                   <div class="col-lg-6 col-md-6 col-sm-6 col-6 xs-12">
-                           <div class="form-group">
-                         <label for="interes">INTERES</label>
-                         <input type="float" name="interes"   id="interes" class="form-control " placeholder="Impuesto...">
-
-                        </div>
-                   </div>
-            
-      
      
 <div class="row">
 
@@ -137,23 +113,11 @@
                          <input type="text" name="descripcion" id="descripcion" class="form-control" placeholder="Descripcion...">
                    </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                  
-                         <label for="marca">MARCA</label>
-                         <input type="text" name="marca" id="marca" class="form-control" placeholder="Marca...">
-                   
-            </div>
+
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                   <div class="form-group">
-                         <label for="modelo">MODELO</label>
-                         <input type="text" name="modelo" id="modelo" class="form-control" placeholder="Modelo...">
-                   </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                  <div class="form-group">
-                         <label for="serial">SERIAL</label>
-                         <input type="text" name="serial" id="serial" class="form-control" placeholder="Serial...">
+                         <label for="peso">Peso</label>
+                         <input type="number" name="peso" id="peso" class="form-control" placeholder="Precio...">
                    </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
@@ -194,10 +158,8 @@
                         
                         <th>Opciones</th>
                         <th>Descripcion</th>
-                        <th>Modelo</th>
-                        <th>Marca</th>
-                        <th>Serial</th>
                         <th>OBSV</th>
+                        <th>PESO</th>
                          <th>Cover</th>
                         <th>Tazacion</th>
                         <th>interes</th>
@@ -212,8 +174,6 @@
                         <th></th>
                          <th></th>
                          <th></th>
-                        <th></th>
-                        <th></th>
                         <th></th>
                         <th ><h4 id="total" > </h4></th>
 
@@ -255,19 +215,12 @@
 var cont=0;
 total=0;
 int=0;
-baja=10;
+baja=5;
 var cal=parseInt(cal);
 subtotal=[];
 $("#guardar").hide();
 $("#bdni").change(mostarvalores);
-$("#categoria").change(mostarinteres);
 
-function mostarinteres()
-{
-
-      datosinteres=document.getElementById('categoria').value.split('_');
-      $("#interes").val(datosinteres[1]);
-}
 
 function mostarvalores()
 {
@@ -280,26 +233,24 @@ function mostarvalores()
 function agregar(){
 
  descripcion=$("#descripcion").val();
- modelo=$("#modelo").val();
- marca=$("#marca").val();
- serial=$("#serial").val();
  obsv=$("#obsv").val();
+ peso=$("#peso").val();
  cover=$("#cover").val();
  tazacion=$("#tazacion").val();
  interes=$("#interes").val();
 
 
-      if( descripcion!="" && modelo!="" && marca!="" && obsv!="" && tazacion!="" && cont<=0 && interes!="")
+      if( descripcion!=""  && obsv!="" && tazacion!="" && cont<=0 && interes!="" && peso!="")
       {
             
-            cal=(tazacion*interes);
-            if (cal=cal<=9) {
+            cal=(tazacion*0.18);
+            if (cal=cal<=5) {
 
                   cal=baja;
             }
             else
             {
-                  cal=(tazacion*interes);
+                  cal=(tazacion*0.18);
             }
             subtotal[cont]=(parseFloat(cal)+parseFloat(tazacion));
             total=(parseFloat(total)+parseFloat(subtotal[cont]));

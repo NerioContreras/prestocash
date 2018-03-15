@@ -124,8 +124,8 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="/contrato/nuevo"><i class="fa fa-circle-o"></i>Electro y Herramientas</a></li>
-                <li><a href="/contrato/nuevo"><i class="fa fa-circle-o"></i>ORO</a></li>
-                <li><a href="/contrato/nuevo"><i class="fa fa-circle-o"></i>CARROS</a></li>
+                <li><a href="/contrato/oro"><i class="fa fa-circle-o"></i>ORO</a></li>
+                <li><a href="/contrato/carro"><i class="fa fa-circle-o"></i>CARROS</a></li>
               </ul>
               </ul>      
 
@@ -169,9 +169,11 @@
                  <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
+                 <li><a href="/consultas/personas"><i class="fa fa-circle-o"></i> Ventas </a></li>
                 <li><a href="/consultas/categorias"><i class="fa fa-circle-o"></i>Ingresos</a></li>
                 <li><a href="/consultas/articulos"><i class="fa fa-circle-o"></i>Egresos</a></li>
                 <li><a href="/consultas/personas"><i class="fa fa-circle-o"></i> Cierre de Caja</a></li>
+
               </ul>
             </li>
 
